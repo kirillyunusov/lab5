@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Юнусов Кирило</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="resume-container">
+    <header class="resume-header">
+        <div class="header-content">
+            <h1 class="name-title">Юнусов Кирило</h1>
+            <p class="job-title">Fullstack Developer</p>
+        </div>
+        <div class="theme-switch">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+                <span class="theme-icon moon">🌙</span>
+                <span class="theme-icon sun">☀️</span>
+            </label>
+        </div>
+    </header>
+
+    <main class="resume-content">
+        <section class="card contact-section">
+            <h2 class="section-title"><span>📱</span> Контакти</h2>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> kirill.yunusov.dev@gmail.com</li>
+                <li><strong>Телефон:</strong> +380 97 123 4567</li>
+                <li><strong>Локація:</strong> Львів, Україна</li>
+                <li><strong>GitHub:</strong> github.com/kirill-yunusov</li>
+            </ul>
+        </section>
+
+        <section class="card objective-section">
+            <h2 class="section-title"><span>🎯</span> Мета</h2>
+            <p>Fullstack розробник з акцентом на JavaScript екосистему. Прагну до участі в амбітних проектах, де можна застосовувати сучасні технології та покращувати користувацький досвід.</p>
+        </section>
+
+        <section class="card education-section">
+            <h2 class="section-title"><span>🎓</span> Освіта</h2>
+            <div class="education-item">
+                <h3>Національний Університет "Львівська Політехніка"</h3>
+                <p class="education-details">2022 – 2026</p>
+                <p>Спеціалізація: Кібербезпека</p>
+            </div>
+        </section>
+
+        <section class="card experience-section">
+            <h2 class="section-title"><span>💼</span> Досвід</h2>
+            <article class="job-item">
+                <h3>Fullstack Developer — TechSolutions Inc.</h3>
+                <p class="job-period">Липень 2023 – До тепер</p>
+                <ul class="job-responsibilities">
+                    <li>Розробка SPA на React з використанням TypeScript</li>
+                    <li>Створення REST API на Node.js та Express</li>
+                    <li>Оптимізація продуктивності веб-додатків</li>
+                    <li>Участь у code review та наставництві junior розробників</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card skills-section">
+            <h2 class="section-title"><span>🛠️</span> Навички</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>HTML5, CSS3, Sass</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React, Redux</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <ul>
+                        <li>Node.js, Express</li>
+                        <li>MongoDB, PostgreSQL</li>
+                        <li>REST API, GraphQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Інструменти</h4>
+                    <ul>
+                        <li>Git, GitHub</li>
+                        <li>Docker, Kubernetes</li>
+                        <li>Webpack, Vite</li>
+                        <li>Jest, Cypress</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="card languages-section">
+            <h2 class="section-title"><span>🌍</span> Мови</h2>
+            <ul class="languages-list">
+                <li>Українська — рідна</li>
+                <li>Англійська — Upper-Intermediate</li>
+                <li>Російська — вільно</li>
+            </ul>
+        </section>
+
+        <section class="card references-section">
+            <h2 class="section-title"><span>💬</span> Відгуки</h2>
+            <ul id="comments-list" class="comments-list"></ul>
+        </section>
+    </main>
+
+    <footer class="resume-footer">
+        <div class="system-info">
+            <h3>Системна інформація</h3>
+            <pre id="systemInfo"></pre>
+        </div>
+        <p class="copyright">© 2024 Юнусов Кирило. Всі права захищені.</p>
+    </footer>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Зв'язатися зі мною</h2>
+        <form action="https://formspree.io/f/mqabawrd" method="POST">
+            <div class="form-group">
+                <label for="name">Ваше ім'я</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Повідомлення</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Надіслати</button>
+        </form>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
